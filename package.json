@@ -1,0 +1,65 @@
+{
+  "name": "express5-ready",
+  "version": "0.1.0",
+  "description": "Find and fix Express 4 code that breaks on Express 5.",
+  "type": "module",
+  "bin": {
+    "express5-ready": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "skills",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Salman-Labs/express5-ready.git"
+  },
+  "homepage": "https://github.com/Salman-Labs/express5-ready#readme",
+  "bugs": {
+    "url": "https://github.com/Salman-Labs/express5-ready/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "express",
+    "express5",
+    "migration",
+    "path-to-regexp"
+  ],
+  "author": "Salman Labs",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/parser": "^7.28.5",
+    "path-to-regexp": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.1",
+    "express": "^5.1.0",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-query-boolean": "^2.0.0",
+    "express-query-int": "^3.0.0",
+    "hpp": "^0.2.3",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4",
+    "xss-clean": "^0.1.4"
+  }
+}
